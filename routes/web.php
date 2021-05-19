@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Route;
  * One To One
  */
 
+Route::get('/one-to-one-insert', [OneToOneController::class, 'oneToOneInsert'])->name('relationships.oneToOneInsert');
+
 Route::get('/one-to-one-inverse', [OneToOneController::class, 'oneToOneInverse'])->name("relationships.oneToOneInverse");
 Route::get('/one-to-one', [OneToOneController::class, 'oneToOne'])->name("relationships.oneToOne");
 

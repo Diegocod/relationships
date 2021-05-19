@@ -9,6 +9,9 @@ class Country extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name'];
+
+
     public function location(){ //esse método retorna um relacionamento de um para um
         /*
         por convenção o eloquente presume que tenha um country_id "dentro do model" Location,

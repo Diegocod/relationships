@@ -9,6 +9,9 @@ class Location extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['latitude', 'longitude'];
+
+
     public function country()
     {
         return $this->belongsTo(Country::class); //a chave estrangeira ne location pertence a Country::class
