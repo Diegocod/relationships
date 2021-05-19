@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Location extends Model
 {
     use HasFactory;
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class); //a chave estrangeira ne location pertence a Country::class
+        
+    }
+    
+
+
+
 }
