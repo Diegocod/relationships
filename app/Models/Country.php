@@ -21,4 +21,17 @@ class Country extends Model
         return $this->hasOne(Location::class); 
         
     }
+
+
+    public function states()//nome no plural pois retornará muitos (não é obrigado)
+    {
+        return  $this->hasMany(State::class); 
+        /*o laravel infere que existe uma foreign key chamada 'country_id' na tabela
+        states
+        e a local key (chave originadora da estrangeira) se chama 'id'
+        */
+
+    }
+
+
 }

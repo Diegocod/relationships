@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\{
-    OneToOneController
+    OneToOneController,
+    OneToManyController
 };
 
 use Illuminate\Support\Facades\Route;
@@ -11,9 +12,11 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/one-to-one-insert', [OneToOneController::class, 'oneToOneInsert'])->name('relationships.oneToOneInsert');
-
 Route::get('/one-to-one-inverse', [OneToOneController::class, 'oneToOneInverse'])->name("relationships.oneToOneInverse");
 Route::get('/one-to-one', [OneToOneController::class, 'oneToOne'])->name("relationships.oneToOne");
+
+Route::get('/one-to-many', [OneToManyController::class, 'oneToMany'])->name('relationships.oneToMany');
+
 
 Route::get('/', function () {
     return view('welcome');
