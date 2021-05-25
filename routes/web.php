@@ -16,6 +16,7 @@ Route::get('/one-to-one-inverse', [OneToOneController::class, 'oneToOneInverse']
 Route::get('/one-to-one', [OneToOneController::class, 'oneToOne'])->name("relationships.oneToOne");
 
 Route::get('/one-to-many', [OneToManyController::class, 'oneToMany'])->name('relationships.oneToMany');
+Route::get('/many-to-one', [OneToManyController::class, 'manyToOne'])->name('relationships.manyToOne');
 
 
 Route::get('/', function () {
